@@ -56,6 +56,7 @@ const ChatSideBarContainer = styled.div`
     border-top: 1px solid var(--hello-color);
     max-width: 260px;
     margin-top: 60px;
+    overflow-y: scroll;
 
     >hr {
         margin-top: 10px;
