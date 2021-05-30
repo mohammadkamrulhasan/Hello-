@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-<<<<<<< HEAD
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,13 +14,6 @@ import { auth } from "./firebase";
 import Login from "./components/Login";
 import Spinner from "react-spinkit";
 import Home from './components/Home/Home';
-=======
-import {Switch, Route} from 'react-router-dom';
-import About from "./components/About/About";
-import Navbar from "./components/Navbar/Navbar";
-
-
->>>>>>> origin/Ahmed-Ali
 
 function App() {
 
@@ -44,7 +36,6 @@ function App() {
   }
 
   return (
-<<<<<<< HEAD
     <div className="app">
       <Router>
         <Route path="/" exact>
@@ -66,16 +57,6 @@ function App() {
           </>
         )}
       </Router>
-=======
-    <div>
-      <Navbar />
-       <Switch>
-         <Route path="/about" exact>
-                <About />
-         </Route>
-       </Switch>
-    
->>>>>>> origin/Ahmed-Ali
     </div>
   );
 }
