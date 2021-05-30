@@ -32,7 +32,7 @@ const Review = () => {
     <section className="services-container mt-5">
             <div className="text-center">
                 <h5 style={{color: '#1CC7C1'}}>Testimonial</h5>
-                <h2>What Our Client</h2>
+                <h2>What Our Clients Say</h2>
             </div>
             <div className="d-flex justify-content-center">
             <div className="w-75 row mt-5 pt-5">
