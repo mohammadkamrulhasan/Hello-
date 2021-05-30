@@ -10,15 +10,9 @@ import { store } from './app/store';
 
 ReactDOM.render(
   <React.StrictMode>
-<<<<<<< HEAD
     <Provider store={store}>
     <App />
     </Provider>
-=======
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
->>>>>>> origin/Ahmed-Ali
   </React.StrictMode>,
   document.getElementById('root')
 );
