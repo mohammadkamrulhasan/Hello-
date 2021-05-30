@@ -14,6 +14,7 @@ import { auth } from "./firebase";
 import Login from "./components/Login";
 import Spinner from "react-spinkit";
 import Home from './components/Home/Home';
+import About from './components/About/About';
 
 function App() {
 
@@ -41,6 +42,10 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
+        <Route path="/about" >
+          <About />
+        </Route>
+        <Route path="/chat">
         {!user ? (
           <Login />
         ) : (
@@ -56,6 +61,7 @@ function App() {
             </AppBody>
           </>
         )}
+        </Route>
       </Router>
     </div>
   );

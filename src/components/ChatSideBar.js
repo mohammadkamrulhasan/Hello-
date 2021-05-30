@@ -5,17 +5,20 @@ import CreateIcon from '@material-ui/icons/Create';
 import { Add, Apps, BookmarkBorderOutlined, Drafts, ExpandLess, ExpandMore, FileCopy, Inbox, InsertComment, PeopleAlt } from '@material-ui/icons';
 import ChatSideBarOptions from './ChatSideBarOptions';
 import { useCollection } from "react-firebase-hooks/firestore";
-import { db } from '../firebase';
+import { auth, db } from '../firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 const ChatSideBar = () => {
+    
+    const [user] = useAuthState(auth);
     const [channels, loading, error] = useCollection(db.collection("rooms"))
 
     return (
         <ChatSideBarContainer>
             <SideBarHeader>
                 <SideBarInfo>
-                    <h2>Hello Home</h2>
+                    <h2>Hello {user.displayName}</h2>
                     <h3>
                         <FiberManualRecordIcon />
                         hello!
@@ -50,7 +53,7 @@ const ChatSideBar = () => {
 export default ChatSideBar;
 
 const ChatSideBarContainer = styled.div`
-    color: white;
+    color: black;
     background-color: var(--hello-color);
     flex: 0.3;
     border-top: 1px solid var(--hello-color);
@@ -67,7 +70,7 @@ const ChatSideBarContainer = styled.div`
 
 const SideBarHeader = styled.div`
     display: flex;
-    border-bottom: 1px solid var(--hello-color);
+    border-bottom: 1px solid var(--hello-color) !important;
     padding-bottom: 10px;
     padding: 13px;
 
