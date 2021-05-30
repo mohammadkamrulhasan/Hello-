@@ -13,6 +13,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
 import Login from "./components/Login";
 import Spinner from "react-spinkit";
+import Home from './components/Home/Home';
 
 function App() {
 
