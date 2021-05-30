@@ -19,13 +19,13 @@ function App() {
 
   const [user, loading] = useAuthState(auth);
 
-  if(loading) {
+  if (loading) {
     return (
       <Loading>
         <Content>
           <img src="https://i.ibb.co/xYJZQTt/hello.png" alt="" />
 
-          <Spinner 
+          <Spinner
             name="ball-spin-fade-loader"
             color="#6EC5E9"
             fadeIn="none"
@@ -38,21 +38,24 @@ function App() {
   return (
     <div className="app">
       <Router>
-      {!user ? (
-        <Login />
-      ) : (
-        <>
-          <ChatHeader />
-          <AppBody>
-            <ChatSideBar />
-            <Switch>
-              <Route path="/" exact>
-                <Chat />
-              </Route>
-            </Switch>
-          </AppBody>
-        </>
-      )}
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        {!user ? (
+          <Login />
+        ) : (
+          <>
+            <ChatHeader />
+            <AppBody>
+              <ChatSideBar />
+              <Switch>
+                <Route path="/chat">
+                  <Chat />
+                </Route>
+              </Switch>
+            </AppBody>
+          </>
+        )}
       </Router>
     </div>
   );
